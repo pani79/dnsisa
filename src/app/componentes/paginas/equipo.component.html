@@ -1,0 +1,43 @@
+<h1>Equipo</h1>
+
+
+<p>
+    Los equipos de salud son actores centrales en los procesos de atención y promoción de los derechos sexuales y los derechos reproductivos de las personas usuarias. Su actividad es central para contribuir a que las personas desarrollen autonomía para la toma de decisiones sobre su salud sexual y salud reproductiva de manera libre, consciente e informada.
+</p>
+<p>
+    Se entiende a los equipos de salud en un sentido amplio, es decir, conformados por médicas y médicos, obstétricas, enfermeras y enfermeros, trabajadoras y trabajadores sociales, psicólogas y psicólogos, educadoras y educadores, comunicadoras y comunicadores, personal administrativo y de maestranza, entre otros, que trabajan cotidianamente en hospitales, centros de salud, unidades sanitarias móviles.
+</p>
+    
+<div>    
+    <div class="boton" (click)="equipoFiltra(1, 'DIRECCION')">Dirección Nacional de Sistemas de Información Sanitaria</div>
+</div>
+<br><br>
+<div>    
+    <div class="boton" (click)="equipoFiltra(3, 'DIRECCION')">Interoperabilidad, Estándares y Desarrollo</div>
+    <div class="boton" (click)="equipoFiltra(2, 'DIRECCION')">Dirección de integración de la información sanitaria</div>
+</div>
+
+
+<div class="equipo">
+    <div class="miembro" *ngFor="let miembro of equipoSeleccionado">
+        <div>
+            <span class="icono">Y</span>
+        </div>
+        <div>
+            <h4>{{equipo[miembro].apellido}}, {{equipo[miembro].nombre}}</h4>
+            <p class="direccion">{{direcciones[equipo[miembro].direccion].sigla}}</p>
+            <div>
+                <div class="boton" *ngFor="let funcion of equipo[miembro].funciones">{{direccionFunciones[funcion]}}</div>
+            </div>
+            <p>{{equipo[miembro].descripcion}}</p> 
+            
+            <!-- <p>{{miembro|json}}</p> -->
+        </div>
+    </div>
+</div>
+
+<!-- 
+<p>{{equipo|json}}</p>
+<hr>
+<p>{{equipoSeleccionado}}</p>
+-->

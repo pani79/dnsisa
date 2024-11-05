@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importamos la ROBOTO que es la piola tipografia actual del SISA */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,700,700i,900,900i&display=swap'); 
+@import 'assets/sisafont.css';
+*/
+
+
+/* 
+IDENTIDAD
+
+Colores
+
+azul principal: #242c4f;
+azul secundario: #45658d;
+amarillo: #e7ba61;
+
+*/
+html, body { height: 100%; }
+
+html { 
+    background-color: #242c4f;
+}
+
+body { 
+    margin: 0; 
+    font-family: Montserrat, "Helvetica Neue", sans-serif; 
+}
+
+h1, h2, h3, h4, h5, h6{		
+    font-family: Lora, "Helvetica Neue", sans-serif; 
+    /* color: white; */
+}
+
+p{
+    /* color: white; */
+}
+
+
+
+
+.intContAncho{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+	position: relative;  
+    background-color: #242c4f;
+    color: #fff;
+}
+.intContAncho > .contenido{
+    display: flex;
+    align-self: center;
+    justify-content:space-between;    
+	position: relative; 
+	width: 1024px; 
+    margin: 20px auto;
+    /* 
+    border: dotted pink 1px;
+    display: flex;
+    background-color: lightcoral;
+    background-color: yellowgreen; 
+    */
+}
+/* 
+.intContAncho > .contenido > *{
+    border: dotted pink 1px;
+}
+*/
+
+.logoDnsisa{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background-color: #242c4f;
+    color: #fff;
+}
+.logoDnsisa > *{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+
+.boton{
+    display: inline-flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 10px;
+    border: rgb(221, 221, 221) 1px solid;
+}

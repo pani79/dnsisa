@@ -1,0 +1,42 @@
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+Puesta en marcha e instalaciones
+
+
+ng new DNSISA-APP
+
+Dependecias . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+
+ng add @angular/material
+
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+GIT 
+
+git init
+git add .
+
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+COMPONENTES
+
+
+ng g c componentes/interface/pagina/cabecera --skip-tests --flat
+ng g c componentes/interface/pagina/estructuraPrincipal --skip-tests --flat
+ng g c componentes/interface/pagina/pie --skip-tests --flat
+ng g c componentes/interface/popUp --skip-tests --flat
+
+ng g c compartidos/interfaces/elementos/botonera --skip-tests --flat
+
+ng g c componentes/formularios/autogestion/formRepositoriosAplicacionesCreacion --skip-tests --flat
+
+ng g c componentes/paginas/equipo --skip-tests --flat
+ng g c componentes/paginas/home --skip-tests --flat
+
+
+ng g m librerias/material

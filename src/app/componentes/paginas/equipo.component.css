@@ -1,0 +1,41 @@
+.equipo{ 
+    display: flex; 
+    flex-direction: row; 
+    gap: 10px; 
+    width: 100%;
+    margin-top: 40px; 
+}
+
+.equipo > .miembro{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.miembro > div{ display: flex; flex-direction: column; }
+.miembro > div:first-child{
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #242c4f;
+    /* border: 1px solid rgba(0, 0, 0, .2); */
+}
+.miembro > div:first-child > span{ 
+    display: flex;
+    align-self: center;
+    color: white; 
+    font-weight: bold; 
+    font-size: 38px;
+}
+
+.miembro > div:last-child > *{ margin: 0px; padding: 0px; }
+
+.miembro > div:last-child > p{ font-size: 12px; margin-top: 8px; }
+.miembro > div:last-child > p.direccion{ font-size: 14px; font-weight: bold; }
+.miembro > div *{ font-family: Montserrat !important; }

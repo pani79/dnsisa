@@ -1,0 +1,19 @@
+.formContenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formContenedor > div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+.formContenedor > *:last-child{
+    display: flex;
+    align-self: flex-end;
+}
