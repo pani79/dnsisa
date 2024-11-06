@@ -229,9 +229,9 @@ export const EQUIPO = [
 
 
 export const F_REP_APP_LENG = {
-    java: [17, 21],
-    php: [8.2, 21],
-    php: [8.2, 21]
+    Java: [17, 21],
+    PHP: [8.2, 21],
+    Node: [18, 20, 0]
 
 }
 
