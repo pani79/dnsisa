@@ -1,4 +1,13 @@
 .equipo{ 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    gap: 10px; 
+    width: 100%;
+    margin-top: 40px; 
+}
+/* 
+.equipo{ 
     display: flex; 
     flex-direction: row; 
     gap: 10px; 
@@ -6,17 +15,16 @@
     margin-top: 40px; 
 }
 
+*/
 .equipo > .miembro{
     display: flex;
     flex-direction: row;
     gap: 20px;
-    max-width: 200px;
     padding: 10px;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: rgba(231, 186, 97, .2);
     border: 1px solid rgba(0, 0, 0, .2);
 }
-
 .miembro > div{ display: flex; flex-direction: column; }
 .miembro > div:first-child{
     justify-content: center;

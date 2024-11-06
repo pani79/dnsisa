@@ -40,3 +40,14 @@ ng g c componentes/paginas/home --skip-tests --flat
 
 
 ng g m librerias/material
+
+
+
+
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+https://www.youtube.com/watch?v=KQ3W1WgenDw&t=3s
+
+https://www.syncfusion.com/blogs/post/host-angular-app-in-github-pages
+
+https://dev.to/gedgonz/haciendo-deploy-de-una-app-en-angular-a-githubpages-4bll

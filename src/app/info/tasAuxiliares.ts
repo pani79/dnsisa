@@ -226,3 +226,175 @@ export const EQUIPO = [
     ]
      */
 ];
+
+
+export const F_REP_APP_LENG = {
+    java: [17, 21],
+    php: [8.2, 21],
+    php: [8.2, 21]
+
+}
+
+
+
+/* 
+
+Tecnología
+
+Lenguaje de Programación
+
+[ ] Java Versión: [ ] 17 [ ] 21
+[ ] PHP Versión: [ ] 8.2 [ ] 
+[ ] Node.js Versión: [ ] 18 [ ] 20 [ ] Otro:
+
+Especificar: []
+
+Frameworks Utilizados (si aplica)
+
+[]
+
+Repositorio
+
+Nombre del Repositorio
+
+[]
+
+URL del Repositorio (si existe)
+
+[]
+
+Información de la Aplicación
+
+URL Principal de la Aplicación
+
+[]
+
+Endpoints de la Aplicación
+
+[Agregar los endpoints de la API]
+
+Endpoint: []
+
+Método: [GET/POST/PUT/DELETE]
+
+Descripción: []
+
+Endpoint: []
+
+Método: [GET/POST/PUT/DELETE]
+
+Descripción: []
+[Añadir más si es necesario]
+
+Servicios que Consumirá la Aplicación
+
+Backends
+
+[Descripción del backend que la aplicación consumirá]
+
+APIs Externas
+
+[Descripción de las APIs externas que se consumirán]
+
+Bases de Datos
+
+Tipo de Base de Datos:
+
+[ ] MySQL
+
+[ ] Oracle
+
+[ ] PostgreSQL
+
+[ ] Otro: []
+
+Nombre de la Base de Datos:
+
+[]
+
+Caches
+
+Utilizará un sistema de caché:
+
+[ ] Sí
+
+[ ] No
+
+Descripción del sistema de caché (si aplica):
+
+[]
+
+Información de Despliegue
+
+Ambiente de Despliegue
+
+[ ] Desarrollo
+
+[ ] QA
+
+[ ] Producción
+
+[ ] Otros: []
+
+URL de Despliegue
+
+[]
+
+Responsables del Proyecto
+
+Owner/Product Manager/Product Owner
+
+Nombre: []
+
+Contacto: []
+
+Desarrollador(es) Principal(es)
+
+Nombre: []
+
+Contacto: []
+
+Otros Involucrados (QA, DevOps, etc.)
+
+Nombre: []
+
+Rol: []
+
+Contacto: []
+
+Permisos Necesarios
+
+Acceso a Git
+
+Usuarios y sus permisos (lectura/escritura):
+
+
+
+Acceso a OpenShift
+
+Usuarios y permisos:
+
+
+
+Consumo de Servicios
+
+Acceso a través de 3scale o Rutas Públicas
+
+Tipo de acceso:
+
+[ ] 3scale
+
+[ ] Rutas públicas
+
+Storage
+
+Requiere Storage Local
+
+[ ] Sí
+
+[ ] No
+
+Comentarios Adicionales
+
+[Espacio para agregar cualquier información adicional relevante]
+*/
