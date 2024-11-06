@@ -13,7 +13,24 @@
     background-color: lightgray;
 }
 
+.formContenedor > div:first-child > div{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
 .formContenedor > *:last-child{
     display: flex;
     align-self: flex-end;
 }
+
+
+.formContenedor .seccion > div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.formContenedor .seccion > div.HOR{ flex-direction: row; }
+.formContenedor .seccion > div.VER{ flex-direction: column; }

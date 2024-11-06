@@ -227,15 +227,17 @@ export const EQUIPO = [
      */
 ];
 
-
 export const F_REP_APP_LENG = {
     Java: [17, 21],
     PHP: [8.2, 21],
     Node: [18, 20, 0]
-
 }
 
+export const F_REP_APP_ENDPOINT = ['GET', 'POST', 'PUT', 'DELETE']
 
+export const F_REP_APP_DB = ['MySQL', 'Oracle', 'PostgreSQL', 'Otro']
+
+export const F_REP_APP_AMBIENTE = ['Desarrollo', 'QA', 'Producción', 'Otros']
 
 /* 
 
@@ -248,97 +250,49 @@ Lenguaje de Programación
 [ ] Node.js Versión: [ ] 18 [ ] 20 [ ] Otro:
 
 Especificar: []
-
 Frameworks Utilizados (si aplica)
-
 []
 
 Repositorio
-
-Nombre del Repositorio
-
-[]
-
-URL del Repositorio (si existe)
-
-[]
+Nombre del Repositorio[]
+URL del Repositorio (si existe)[]
 
 Información de la Aplicación
-
-URL Principal de la Aplicación
-
-[]
+URL Principal de la Aplicación[]
 
 Endpoints de la Aplicación
-
 [Agregar los endpoints de la API]
-
 Endpoint: []
-
 Método: [GET/POST/PUT/DELETE]
-
 Descripción: []
-
 Endpoint: []
-
 Método: [GET/POST/PUT/DELETE]
-
 Descripción: []
 [Añadir más si es necesario]
 
 Servicios que Consumirá la Aplicación
-
 Backends
-
 [Descripción del backend que la aplicación consumirá]
 
 APIs Externas
-
 [Descripción de las APIs externas que se consumirán]
 
 Bases de Datos
-
 Tipo de Base de Datos:
+[ ] MySQL [ ] Oracle [ ] PostgreSQL [ ] Otro: []
 
-[ ] MySQL
-
-[ ] Oracle
-
-[ ] PostgreSQL
-
-[ ] Otro: []
-
-Nombre de la Base de Datos:
-
-[]
+Nombre de la Base de Datos:[]
 
 Caches
-
-Utilizará un sistema de caché:
-
-[ ] Sí
-
-[ ] No
-
-Descripción del sistema de caché (si aplica):
-
-[]
+Utilizará un sistema de caché: [ ] Sí [ ] No
+Descripción del sistema de caché (si aplica):[]
 
 Información de Despliegue
-
 Ambiente de Despliegue
 
-[ ] Desarrollo
+[ ] Desarrollo [ ] QA [ ] Producción [ ] Otros: []
 
-[ ] QA
-
-[ ] Producción
-
-[ ] Otros: []
-
-URL de Despliegue
-
-[]
+URL de Despliegue[]
 
 Responsables del Proyecto
 

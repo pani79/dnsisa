@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 
 //  Modelos
 import { EquipoMiembro } from 'src/app/modelos/ta/equipoMiembro';
+
 //  Datos
 import { EQUIPO, DIRECCIONES, DIRECCION_FUNCIONES } from 'src/app/info/tasAuxiliares';
 
