@@ -1,0 +1,5 @@
+<div class="{{claseGeneral}} {{claseEspecifica}} {{esquinasClase}}"  [ngClass]="{ 'inhabilitado': !config['habilitado'] }">
+    <span *ngIf="icono" class="{{claseIcono}}"  [style.font-size.px]="icoTamm"></span>
+    <span *ngIf="!icono">{{input[3]}}</span>
+    <label class="texto">{{input[3]}}</label><!-- [style.display]="input[3] ? 'flex': 'none'" -->
+</div>

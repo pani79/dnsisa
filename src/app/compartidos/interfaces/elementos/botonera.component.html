@@ -1,4 +1,10 @@
-<div class="contenedor">
-    <div>Materiales para equipos de salud</div>
-    <div>Materiales para desarrolladores</div>
+<div class="contenedorBotones">
+    <DNSISa-com-ele-boton
+        *ngFor="let boton of input"
+        [input]="boton"        
+        >
+        <!-- (click)="personaBusca()" -->
+    </DNSISa-com-ele-boton>
 </div>
+
+<p> >> {{input|json}}</p>

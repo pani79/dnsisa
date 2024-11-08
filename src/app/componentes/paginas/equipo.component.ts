@@ -25,6 +25,15 @@ export class EquipoComponent {
   
   direcciones: any[] = []
   direccionFunciones: string[] = []
+
+  busquedaTipos: any[] = [
+    {id: 'DIRECCION', nombre: 'Direcciones'},
+    {id: 'FUNCION', nombre: 'Funciones y tareas'},
+    {id: 'APELLIDO', nombre: 'Apellido'},
+    {id: 'NOMBRE', nombre: 'Nombre'}
+  ]
+  busquedaFiltro = { tipo: '', valor: '' as any}
+
   
   constructor() {
     
@@ -47,7 +56,12 @@ export class EquipoComponent {
 
   }
 
-  equipoFiltra(valor: number, tipo?: string){
+  buscadorDefine(tipo: string){
+    console.log('buscadorDefine => '+ tipo);
+    this.busquedaFiltro.tipo = tipo
+  }
+
+  equipoFiltra(tipo: string, valor?: number){
     console.log('equipoFiltra => '+ tipo + ' | '  + valor);
     
     this.equipoSeleccionado = []
@@ -61,7 +75,17 @@ export class EquipoComponent {
       )
     }
 
-    (tipo === 'DIRECCION') ? filtraDireccion(valor) : console.log('equipoFiltra => ERROR : '+ tipo);
+    const filtraFuncion = (identificadorFuncion: number) => {
+      console.log('equipoFiltra => vamos a filtrar la FUNCION | '  + valor);
+      this.equipo.forEach(
+        (miembro, index) => {
+          if(miembro.funciones.indexOf(identificadorFuncion) >= 0){ this.equipoSeleccionado.push(index); }
+        }
+      )
+    }
+
+    (tipo === 'DIRECCION') ? filtraDireccion(valor!) : 
+    (tipo === 'FUNCION') ? filtraFuncion(valor!) : console.log('equipoFiltra => ERROR : '+ tipo);
     
     //this.equipoSeleccionado = this.equipo
   }

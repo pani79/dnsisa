@@ -31,6 +31,7 @@ ng g c componentes/interface/pagina/estructuraPrincipal --skip-tests --flat
 ng g c componentes/interface/pagina/pie --skip-tests --flat
 ng g c componentes/interface/popUp --skip-tests --flat
 
+ng g c compartidos/interfaces/elementos/boton --skip-tests --flat
 ng g c compartidos/interfaces/elementos/botonera --skip-tests --flat
 
 ng g c componentes/formularios/autogestion/formRepositoriosAplicacionesCreacion --skip-tests --flat

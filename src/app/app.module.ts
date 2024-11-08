@@ -18,6 +18,7 @@ import { BotoneraComponent } from './compartidos/interfaces/elementos/botonera.c
 import { HomeComponent } from './componentes/paginas/home.component';
 import { EquipoComponent } from './componentes/paginas/equipo.component';
 import { FormRepositoriosAplicacionesCreacionComponent } from './componentes/formularios/autogestion/form-repositorios-aplicaciones-creacion.component';
+import { BotonComponent } from './compartidos/interfaces/elementos/boton.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormRepositoriosAplicacionesCreacionComponent } from './componentes/for
     BotoneraComponent,
     HomeComponent,
     EquipoComponent,
-    FormRepositoriosAplicacionesCreacionComponent
+    FormRepositoriosAplicacionesCreacionComponent,
+    BotonComponent
   ],
   imports: [
     BrowserModule,

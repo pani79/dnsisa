@@ -8,6 +8,70 @@
     Se entiende a los equipos de salud en un sentido amplio, es decir, conformados por médicas y médicos, obstétricas, enfermeras y enfermeros, trabajadoras y trabajadores sociales, psicólogas y psicólogos, educadoras y educadores, comunicadoras y comunicadores, personal administrativo y de maestranza, entre otros, que trabajan cotidianamente en hospitales, centros de salud, unidades sanitarias móviles.
 </p>
     
+
+<div class="buscador">
+
+
+    <div>
+        <mat-form-field>
+            <mat-label>Buscar por...</mat-label>
+            <mat-select>
+            <!-- 
+                formControlName="fb_provincia" placeholder="seleccione la provincia"
+                [disabled]="!$any(campos).fb_provincia.editable"
+                -->
+                <mat-option 
+                    *ngFor="let tipo of busquedaTipos" 
+                    [value]="tipo.id"
+                    (click)="buscadorDefine(tipo.id)"
+                >
+                    {{tipo.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div> 
+    
+    <div *ngIf="busquedaFiltro.tipo == 'DIRECCION'">
+        <mat-form-field>
+            <mat-label>Direcciones</mat-label>
+            <mat-select>
+                <mat-option 
+                    *ngFor="let direccion of direcciones" 
+                    [value]="direccion.id"
+                    (click)="equipoFiltra('DIRECCION', direccion.id)"
+                >
+                    {{direccion.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div> 
+    
+    <div *ngIf="busquedaFiltro.tipo == 'FUNCION'">
+        <mat-form-field>
+            <mat-label>Funciones y tareas</mat-label>
+            <mat-select>
+                <mat-option 
+                    *ngFor="let funcion of direccionFunciones; index as i" 
+                    [value]="funcion"
+                    (click)="equipoFiltra('FUNCION', i)"
+                >
+                    {{funcion}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div> 
+
+</div>
+
+<!-- 
+<DNSISa-com-ele-botonera
+    [input]="[
+        ['boton', 'general', 'buscar', 'Dirección Nacional de Sistemas de Información Sanitaria'],
+        ['boton', 'general', 'buscar', 'Interoperabilidad, Estándares y Desarrollo'],
+        ['boton', 'general', 'buscar', 'Dirección de integración de la información sanitaria']
+    ]"
+></DNSISa-com-ele-botonera>
+
 <div>    
     <div class="boton" (click)="equipoFiltra(1, 'DIRECCION')">Dirección Nacional de Sistemas de Información Sanitaria</div>
 </div>
@@ -16,7 +80,7 @@
     <div class="boton" (click)="equipoFiltra(3, 'DIRECCION')">Interoperabilidad, Estándares y Desarrollo</div>
     <div class="boton" (click)="equipoFiltra(2, 'DIRECCION')">Dirección de integración de la información sanitaria</div>
 </div>
-
+ -->
 
 <div class="equipo">
     <div class="miembro" *ngFor="let miembro of equipoSeleccionado">
@@ -36,7 +100,11 @@
     </div>
 </div>
 
+
 <!-- 
+<p>{{direcciones|json}}</p>
+<hr>
+<p>{{busquedaFiltro|json}}</p>
 <p>{{equipo|json}}</p>
 <hr>
 <p>{{equipoSeleccionado}}</p>
