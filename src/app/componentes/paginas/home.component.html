@@ -20,13 +20,13 @@ Equipo
 Personal de los equipos de salud, profesionales, técnicos, administrativos, autoridades, que desempeñen labor asistencial hospitalaria o en centros de salud. La propuesta está dirigida fundamentalmente a todas las profesiones de los equipos de salud, independientemente del puesto de servicio (administrativo, gestión, asistencial). Pueden participar profesionales de ámbito público y/o privado. No requiere requisitos o conocimientos previos.
 </p>
 
-<div 
-    class="boton"
-    [routerLink]="['equipo']" 
->
-Equipo DNSISa
-</div>
 
+
+<DNSISa-com-ele-boton
+    [routerLink]="['equipo']" 
+    [input]="['boton', 'general', 'cmdb_nucleofamiliar', 'Equipo DNSISa']"        
+>
+</DNSISa-com-ele-boton>
 
 
 
@@ -40,14 +40,20 @@ Los horarios de atención son: de lunes a viernes de 9 a 21 hs. Sábados, doming
 También se pueden comunicar con el 0800 Salud Sexual por mail: <strong>saludsexual@msal.gov.ar</strong>
 </p>   
 
-<div 
-    class="boton"
+
+
+<DNSISa-com-ele-boton
     [routerLink]="['autogestion/formularios']" 
+    [input]="['boton', 'general', 'editar', 'Formulario de Creación de Repositorios y Aplicaciones']"        
 >
-Formulario de Creación de Repositorios y Aplicaciones
-</div>
+</DNSISa-com-ele-boton>
 
 
 <h3>Recursos</h3>
 
-<DNSISa-com-ele-botonera></DNSISa-com-ele-botonera>
+<DNSISa-com-ele-botonera
+    [input]="[
+        ['boton', 'general', 'buscar', 'Materiales para equipos de salud'],
+        ['boton', 'general', 'buscar', 'Materiales para desarrolladores']
+    ]"
+></DNSISa-com-ele-botonera>

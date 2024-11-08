@@ -27,6 +27,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
 
   ta_endpoints: any
   ta_tec_leng: any
+  ta_serv_db: any
 
 
   constructor(
@@ -35,6 +36,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
 
     this.ta_endpoints = F_REP_APP_ENDPOINT
     this.ta_tec_leng = F_REP_APP_LENG
+    this.ta_serv_db = F_REP_APP_DB
     this.formularioConfiguracion()
   }
 
@@ -53,6 +55,13 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   get fb_inf_info_url(){      return this.formulario.get('fb_inf_info_url');}
   get fb_inf_info_endPoints(){      return this.formulario.get('fb_inf_info_endPoints');}
 
+  get fb_serv_backend(){      return this.formulario.get('fb_serv_backend');}
+  get fb_serv_apisExternas(){      return this.formulario.get('fb_serv_apisExternas');}
+  get fb_serv_cache(){      return this.formulario.get('fb_serv_cache');}
+  get fb_serv_db(){      return this.formulario.get('fb_serv_db');}
+  get fb_serv_db_tipo(){      return this.formulario.get('fb_serv_db_tipo');}
+  get fb_serv_db_otro(){      return this.formulario.get('fb_serv_db_otro');}
+  
   get fb_inf_info_nombre(){      return this.formulario.get('fb_inf_repo_nombre');}
 
 
@@ -72,6 +81,13 @@ export class FormRepositoriosAplicacionesCreacionComponent {
 
       fb_inf_info_url:          ['', [Validators.required]],
       fb_inf_info_endPoints:            ['', [Validators.required]],
+
+      fb_serv_apisExternas:            ['', [Validators.required]],
+      fb_serv_backend:            ['', [Validators.required]],
+      fb_serv_cache:            ['', [Validators.required]],
+      fb_serv_db:            ['', [Validators.required]],
+      fb_serv_db_tipo:            ['', [Validators.required]],
+      fb_serv_db_otro:            ['', [Validators.required]],
 
       fb_inf_info_nombre:          ['', [Validators.required]]
 

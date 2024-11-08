@@ -60,6 +60,13 @@
             </mat-select>
         </mat-form-field>
     </div> 
+    
+    <div *ngIf="busquedaFiltro.tipo == 'APELLIDO'" class="inputApellido">
+        <mat-form-field>
+            <mat-label>Apellido</mat-label>
+            <input matInput (keyup)="equipoFiltra('APELLIDO', $event)" placeholder="Ingrese al menos tres letras del apellido" #input>
+        </mat-form-field>
+    </div> 
 
 </div>
 
@@ -85,7 +92,7 @@
 <div class="equipo">
     <div class="miembro" *ngFor="let miembro of equipoSeleccionado">
         <div>
-            <span class="icono">Y</span>
+            <span class="icon-mod_usuarios"></span>
         </div>
         <div>
             <h4>{{equipo[miembro].apellido}}, {{equipo[miembro].nombre}}</h4>

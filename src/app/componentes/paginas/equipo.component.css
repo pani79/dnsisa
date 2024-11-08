@@ -58,3 +58,5 @@
 .miembro > div:last-child > p{ font-size: 12px; margin-top: 8px; }
 .miembro > div:last-child > p.direccion{ font-size: 14px; font-weight: bold; }
 .miembro > div *{ font-family: Montserrat !important; }
+
+.inputApellido > *{ width: 350px; }

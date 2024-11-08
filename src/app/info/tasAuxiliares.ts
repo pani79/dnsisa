@@ -28,8 +28,9 @@ export const DIRECCION_FUNCIONES = [
     'DBA', 
     'Dev Ops',
     // 12    
-    'activista floral', 
-    'bibliotecario'
+    'Activista floral', 
+    'Bibliotecario', 
+    'Soporte técnico y asistencia'
 // 0    
 ]
 
@@ -159,7 +160,7 @@ export const EQUIPO = [
         'Matias',
         'Sal',
         1,
-        [5],
+        [3, 9, 10],
         'Desarrollador java / Dios... de 10 a 17hs.',
         'https://images-na.ssl-images-amazon.com/images/I/51BoUJYxrgL._AC_SX425_.jpg',
         true
@@ -177,16 +178,16 @@ export const EQUIPO = [
         'Gonzalo',
         'Pereyra',
         0,
-        [2],
+        [2, 14],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
     ], [
         16,
-        'Debhora',
+        'Debora',
         'Ponce',
         0,
-        [2],
+        [4, 14],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
@@ -195,7 +196,7 @@ export const EQUIPO = [
         'Cynthia',
         'Devoto',
         2,
-        [2],
+        [3, 9, 10],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
@@ -204,8 +205,17 @@ export const EQUIPO = [
         'Natalia Solange',
         'Reabarren',
         2,
-        [2],
+        [4, 14],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
+        'assets/img/png/equipo/soporte/gonza.jpg',
+        true
+    ], [
+        19,
+        'Agustin',
+        'Lago',
+        2,
+        [9, 10, 11, 12],
+        'IT man',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
     ]

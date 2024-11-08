@@ -22,6 +22,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
+//import { MatCardModule } from '@angular/material/card';
 import { MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material/core';
 
 const MaterialComponentes = [
@@ -42,6 +43,7 @@ const MaterialComponentes = [
   MatSortModule,
   MatTableModule,
   MatTooltipModule
+  //,  MatCardModule
 ];
 
 export const FORMATO_PROPIO = {

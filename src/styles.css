@@ -2,10 +2,10 @@
 
 /* Importamos la ROBOTO que es la piola tipografia actual del SISA */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'assets/sisafont.css';
 
 /* 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,700,700i,900,900i&display=swap'); 
-@import 'assets/sisafont.css';
 */
 
 

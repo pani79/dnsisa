@@ -29,8 +29,8 @@ export class EquipoComponent {
   busquedaTipos: any[] = [
     {id: 'DIRECCION', nombre: 'Direcciones'},
     {id: 'FUNCION', nombre: 'Funciones y tareas'},
-    {id: 'APELLIDO', nombre: 'Apellido'},
-    {id: 'NOMBRE', nombre: 'Nombre'}
+    {id: 'APELLIDO', nombre: 'Apellido'}
+    //,{id: 'NOMBRE', nombre: 'Nombre'}
   ]
   busquedaFiltro = { tipo: '', valor: '' as any}
 
@@ -61,7 +61,9 @@ export class EquipoComponent {
     this.busquedaFiltro.tipo = tipo
   }
 
-  equipoFiltra(tipo: string, valor?: number){
+  
+
+  equipoFiltra(tipo: string, valor?: any){
     console.log('equipoFiltra => '+ tipo + ' | '  + valor);
     
     this.equipoSeleccionado = []
@@ -84,8 +86,22 @@ export class EquipoComponent {
       )
     }
 
+    const filtraApellido = (eventoAellido: Event) => {
+      const apellido = (eventoAellido.target as HTMLInputElement).value.toLowerCase()
+      console.log('equipoFiltra => vamos a filtrar la APELLIDO');
+      if(apellido.length < 3) return      
+      console.log('equipoFiltra => vamos a filtrar la APELLIDO | '  + apellido);
+      this.equipo.forEach(
+        (miembro, index) => {
+          console.log('equipoFiltra =>  APELLIDO | '  + apellido + ' | ' + miembro.apellido);
+          if(miembro.apellido.toLowerCase().includes(apellido)){ this.equipoSeleccionado.push(index); }
+        }
+      )
+    }
+
     (tipo === 'DIRECCION') ? filtraDireccion(valor!) : 
-    (tipo === 'FUNCION') ? filtraFuncion(valor!) : console.log('equipoFiltra => ERROR : '+ tipo);
+    (tipo === 'FUNCION') ? filtraFuncion(valor!): 
+    (tipo === 'APELLIDO') ? filtraApellido(valor) : console.log('equipoFiltra => ERROR : '+ tipo);
     
     //this.equipoSeleccionado = this.equipo
   }

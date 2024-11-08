@@ -26,6 +26,7 @@
                         <p>Descripción del Proyecto</p>
                         [Breve descripción de la aplicación y sus funcionalidades] 
                     -->
+                 
                 <div>
                     <mat-form-field hintLabel="Breve descripción de la aplicación y sus funcionalidades">
                         <mat-label>Descripción del Proyecto</mat-label>
@@ -209,9 +210,72 @@
             </div>
         </div>
 
+           
+        
+        <!-- Servicios que Consumirá la Aplicación    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <div class="seccion">
+            <h2>Servicios que consumirá la aplicación</h2>            
+            <!-- Nombre del Proyecto   []   -->      
+             
             
-    
+            <div>
+                
+                <div>
+                    <mat-slide-toggle formControlName="fb_serv_backend" 
+                        class="example-margin">
+                        Backends
+                    </mat-slide-toggle>
+                </div>   
+                <div>
+                    <mat-slide-toggle formControlName="fb_serv_apisExternas" >
+                        APIs Externas
+                    </mat-slide-toggle>
+                </div>  
+                <div>
+                    <mat-slide-toggle formControlName="fb_serv_db" >
+                        Bases de Datos
+                    </mat-slide-toggle>
+                </div>   
+                <div>
+                    <mat-slide-toggle formControlName="fb_serv_cache" 
+                        class="example-margin">
+                        Caches
+                    </mat-slide-toggle>
+                </div>  
 
+            </div>
+            <hr>
+            <br>
+            <div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Tipo de Base de Datos</mat-label>
+                        <mat-select 
+                            formControlName="fb_serv_db" 
+                        >
+                            <mat-option 
+                                *ngFor="let db of ta_serv_db" 
+                                [value]="db"
+                            >
+                                {{db}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div> 
+                <div>
+                    <mat-form-field hintLabel="hintLabel Max 20 letras">
+                        <mat-label>Nombre de la Base de Datos</mat-label>
+                        <input 
+                            matInput
+                            formControlName="fb_serv_db_otro" 
+                            placeholder="Detalle"  
+                        >
+                    </mat-form-field>
+                </div> 
+            </div>
+        </div> 
+    
+<!-- 
     <div>
         
         
@@ -328,15 +392,20 @@
             
             [Espacio para agregar cualquier información adicional relevante]
     </div>
-
-    <div>
-        <div 
-            class="boton"
-            [routerLink]="['']" 
-        >
-        Enviar datos
-        </div>
-    </div>
+ -->
+</div>
+<div>
+    
+    <DNSISa-com-ele-boton
+        [input]="['boton', 'positivo', 'aceptar', 'Enviar requerimientos']"        
+    >
+    </DNSISa-com-ele-boton>
+   <!--  <div 
+        class="boton"
+        [routerLink]="['']" 
+    >
+    Enviar datos
+    </div> -->
 </div>
 
 
