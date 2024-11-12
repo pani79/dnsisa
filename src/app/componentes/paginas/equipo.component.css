@@ -17,6 +17,7 @@
     width: 100%;
     margin-top: 40px; 
 }
+
 /* 
 .equipo{ 
     display: flex; 
@@ -60,3 +61,13 @@
 .miembro > div *{ font-family: Montserrat !important; }
 
 .inputApellido > *{ width: 350px; }
+
+/* 
+/deep/ .selecFuncion .mat-mdc-optgroup{ background-color: #45658d !important; }
+/deep/ .selecFuncion .mat-mdc-optgroup .mdc-list-item__primary-text{ color: #fff !important; }
+.selecFuncion .grupo.mat-mdc-optgroup{ background-color: #45658d !important; color: #45658d !important; }
+.selecFuncion .grupo .mdc-list-item__primary-text{ color: #fff !important; }
+.selecFuncion span.mat-mdc-optgroup-label{ background-color: #45658d !important;; }
+.selecFuncion{ background-color: #45658d !important; color: yellow !important; }
+*/
+/deep/ .selecFuncion .mdc-list-item__primary-text:not(:first-child){  color: #999 !important; }

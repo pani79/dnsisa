@@ -94,4 +94,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     })
   }
 
+  tito(cosa:any){ 
+    console.log('hola tito ', cosa.checked);
+  }
 }

@@ -46,11 +46,15 @@
         </mat-form-field>
     </div> 
     
-    <div *ngIf="busquedaFiltro.tipo == 'FUNCION'">
+    <div *ngIf="busquedaFiltro.tipo == 'FUNCION'" >
         <mat-form-field>
             <mat-label>Funciones y tareas</mat-label>
-            <mat-select>
-                <mat-optgroup [label]="grupo.nombre" *ngFor="let grupo of direccionFuncionesAgrupadas; index as i" >
+            <mat-select multiple>
+                <mat-optgroup 
+                    [label]="grupo.nombre" 
+                    *ngFor="let grupo of direccionFuncionesAgrupadas; index as i" 
+                    class="selecFuncion"
+                >
                     <mat-option
                         [value]="funcion" *ngFor="let funcion of grupo.funciones; index as i" (click)="equipoFiltra('FUNCION', funcion)"
                     >
@@ -104,7 +108,8 @@
     <div class="boton" (click)="equipoFiltra(3, 'DIRECCION')">Interoperabilidad, Estándares y Desarrollo</div>
     <div class="boton" (click)="equipoFiltra(2, 'DIRECCION')">Dirección de integración de la información sanitaria</div>
 </div>
- -->
+<div>{{funcionesSeleccionadas|json}}</div>
+-->
 
 <div class="equipo">
     <div class="miembro" *ngFor="let miembro of equipoSeleccionado">

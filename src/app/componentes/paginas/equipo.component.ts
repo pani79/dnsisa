@@ -26,6 +26,7 @@ export class EquipoComponent {
   direcciones: any[] = []
   direccionFunciones: string[] = []
   direccionFuncionesAgrupadas: any[] = []
+  funcionesSeleccionadas: boolean[] = []
 
   busquedaTipos: any[] = [
     {id: 'DIRECCION', nombre: 'Direcciones'},
@@ -46,6 +47,7 @@ export class EquipoComponent {
     });
     DIRECCION_FUNCIONES.forEach(funcion => {
       this.direccionFunciones.push(funcion)	
+      this.funcionesSeleccionadas.push(false)
     });
     DIRECCION_FUNCIONES_AGRUPADAS.forEach(funcion => {
       this.direccionFuncionesAgrupadas.push(funcion)	
@@ -83,9 +85,29 @@ export class EquipoComponent {
 
     const filtraFuncion = (identificadorFuncion: number) => {
       console.log('equipoFiltra => vamos a filtrar la FUNCION | '  + valor);
+      console.log('equipoFiltra => '  +this.direccionFunciones[identificadorFuncion] +  ' ° '  + this.funcionesSeleccionadas[identificadorFuncion]);
+      
+      this.funcionesSeleccionadas[identificadorFuncion] = (this.funcionesSeleccionadas[identificadorFuncion]) ? false : true
+      let seleccionadas : number[] = []
+      const corroboraFuncion = (miembro: EquipoMiembro, funciones: number[]): boolean => {
+        let resultado = true
+        funciones.forEach(funcionIndex => {
+          if(!miembro.funciones.includes(funcionIndex)) resultado = false
+        })
+        return resultado
+      }
+
+      this.funcionesSeleccionadas.forEach((fnc, index) => {
+        if(fnc) seleccionadas.push(index)
+      })
+
+      console.log('equipoFiltra =>  | seleccionadas.length'  + seleccionadas.length);
+      if(seleccionadas.length === 0 ) return
+
       this.equipo.forEach(
         (miembro, index) => {
-          if(miembro.funciones.indexOf(identificadorFuncion) >= 0){ this.equipoSeleccionado.push(index); }
+          // (miembro.funciones.indexOf(identificadorFuncion) >= 0)
+          if(corroboraFuncion(miembro, seleccionadas)){ this.equipoSeleccionado.push(index); }
         }
       )
     }

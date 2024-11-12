@@ -35,9 +35,7 @@ h1, h2, h3, h4, h5, h6{
     /* color: white; */
 }
 
-p{
-    /* color: white; */
-}
+section{    margin: 20px 0px 40px 0px; }
 
 
 
@@ -85,10 +83,12 @@ p{
     color: #fff;
 }
 
+/* 
 .boton{
     display: inline-flex;
     flex-direction: row;
     padding: 10px;
     border-radius: 10px;
     border: rgb(221, 221, 221) 1px solid;
-}
+} 
+*/

@@ -157,7 +157,7 @@ export const EQUIPO = [
         'Federico',
         'Zelcer',
         2,
-        [3, 12, 13],
+        [3 ,13 ,14],
         'Desarrollador java / Dios... de 10 a 17hs.',
         'https://images-na.ssl-images-amazon.com/images/I/51BoUJYxrgL._AC_SX425_.jpg',
         true
@@ -166,7 +166,7 @@ export const EQUIPO = [
         'Florencia',
         'Alegre',
         1,
-        [5, 2],
+        [5, 11, 2],
         'Desarrollador java / Dios... de 10 a 17hs.',
         'https://images-na.ssl-images-amazon.com/images/I/51BoUJYxrgL._AC_SX425_.jpg',
         true
@@ -193,7 +193,7 @@ export const EQUIPO = [
         'Micaela',
         'Abuin',
         1,
-        [5],
+        [5, 11],
         'Desarrollador java / Dios... de 10 a 17hs.',
         'https://images-na.ssl-images-amazon.com/images/I/51BoUJYxrgL._AC_SX425_.jpg',
         true
@@ -202,7 +202,7 @@ export const EQUIPO = [
         'Gonzalo',
         'Pereyra',
         0,
-        [2, 14],
+        [2, 15],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
@@ -211,7 +211,7 @@ export const EQUIPO = [
         'Debora',
         'Ponce',
         0,
-        [4, 14],
+        [4, 15],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
@@ -229,7 +229,7 @@ export const EQUIPO = [
         'Natalia Solange',
         'Reabarren',
         2,
-        [4, 14],
+        [4, 15],
         'Responsable de QA y Soporte / 1/4 PL / 1/2 enano / 100% duende de jardin',
         'assets/img/png/equipo/soporte/gonza.jpg',
         true
