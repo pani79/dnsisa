@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 import { EquipoMiembro } from 'src/app/modelos/ta/equipoMiembro';
 
 //  Datos
-import { EQUIPO, DIRECCIONES, DIRECCION_FUNCIONES } from 'src/app/info/tasAuxiliares';
+import { EQUIPO, DIRECCIONES, DIRECCION_FUNCIONES, DIRECCION_FUNCIONES_AGRUPADAS } from 'src/app/info/tasAuxiliares';
 
 @Component({
   selector: 'app-equipo',
@@ -25,6 +25,7 @@ export class EquipoComponent {
   
   direcciones: any[] = []
   direccionFunciones: string[] = []
+  direccionFuncionesAgrupadas: any[] = []
 
   busquedaTipos: any[] = [
     {id: 'DIRECCION', nombre: 'Direcciones'},
@@ -45,6 +46,9 @@ export class EquipoComponent {
     });
     DIRECCION_FUNCIONES.forEach(funcion => {
       this.direccionFunciones.push(funcion)	
+    });
+    DIRECCION_FUNCIONES_AGRUPADAS.forEach(funcion => {
+      this.direccionFuncionesAgrupadas.push(funcion)	
     });
 
     //this.direcciones = DIRECCIONES

@@ -11,27 +11,51 @@ export const DIRECCIONES = [
 ]
 
 export const DIRECCION_FUNCIONES = [
-    // 0    
-    'Director Nacional', 
-    'Director de línea', 
-    'Responsable de area', 
-    'Analista funcional', 
-    'Control de calidad', 
-    // 5    
-    'Contenidos', 
-    'Diseño multimedial', 
-    // 7    
-    'Evaluación y monitoreo', 
-    // 8    
-    'Programador FrontEnd', 
-    'Programador BackEnd', 
-    'DBA', 
-    'Dev Ops',
-    // 12    
-    'Activista floral', 
-    'Bibliotecario', 
-    'Soporte técnico y asistencia'
-// 0    
+    'Director Nacional',        // 0
+    'Director de línea',        // 1
+    'Responsable de area',      // 2
+    'Analista funcional',       // 3
+    'Control de calidad',       // 4
+    'Contenidos',       // 5
+    'Diseño multimedial',       // 6
+    'Evaluación y monitoreo',       // 7
+    'Programador FrontEnd',         // 8
+    'Programador BackEnd',      //  9
+    'DBA',      // 10
+    'Edicion de contenidos',        // 11
+    'Dev Ops',      // 12
+    'Activista floral',         // 13
+    'Bibliotecario',        // 14
+    'Soporte técnico y asistencia',      // 15 
+    'Diseño grafico', // 16
+    'Diseño web', // 17
+    'Diseño audiovisual', // 18 
+    'UX' // 19
+]
+
+export const DIRECCION_FUNCIONES_AGRUPADAS = [
+    {
+        nombre: 'Direccion de Personal',
+        funciones: [ 0, 1, 2]
+    }, {
+        nombre: 'QA y Soporte tecnico',
+        funciones: [ 4, 15 ]
+    }, {
+        nombre: 'Contenidos',
+        funciones: [ 3, 11]
+     }, {
+        nombre: 'Diseño y UX',
+        funciones: [ 16, 17, 18, 6, 19]
+    }, {
+        nombre: 'Infraestructura',
+        funciones: [ 12]
+    }, {
+        nombre: 'Desarrollo',
+        funciones: [ 8, 9, 10]
+    }, {
+        nombre: 'Varios',
+        funciones: [ 7, 13, 14 ]
+    }
 ]
 
 
