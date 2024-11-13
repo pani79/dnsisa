@@ -1,252 +1,275 @@
 <h1>Formulario de Creación de Repositorios y Aplicaciones</h1>
 
 <form [formGroup]="formulario" class="formContenedor">
-    <div>
 
 
-        <!-- Información del Proyecto    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <div class="seccion">
-            <h2>Información del Proyecto</h2>            
-            <!-- Nombre del Proyecto   []   -->       
-            <div>
-            
-                <div>
-                    <mat-form-field hintLabel="hintLabel Max 20 letras">
-                        <mat-label>Nombre del Proyecto</mat-label>
-                        <input 
-                            matInput #inputTitulo
-                            formControlName="Nombre del Proyecto" 
-                            minlength="6" maxlength="100" 
-                            placeholder="Nombre del Proyecto"  
-                        >
-                        <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
-                    </mat-form-field>
-                </div>      
-                    <!-- 
-                        <p>Descripción del Proyecto</p>
-                        [Breve descripción de la aplicación y sus funcionalidades] 
-                    -->
-                 
-                <div>
-                    <mat-form-field hintLabel="Breve descripción de la aplicación y sus funcionalidades">
-                        <mat-label>Descripción del Proyecto</mat-label>
-                        <textarea 
-                            matInput #inputDescripcion
-                            formControlName="fb_inf_pr_descripcion" 
-                            maxlength="2000" 
-                            matAutosizeMinRows=3
-                            placeholder="Ingrese la descripción de la configuración"                          
-                            type="text" 
-                            
-                        ></textarea><!-- (keyup)="registroDetalleActualiza(registro, $event.target.value)" -->
-                        <mat-hint align="end">{{inputDescripcion.value.length}}/2000</mat-hint>
-                    </mat-form-field>
-                </div>
-            </div>
-        </div>
+    <div class="HOR seccion1">
+        <div class="VER">
 
-
-        <!-- Tecnología    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <div class="seccion">
-            <h2>Tecnología</h2>
-            
-            <div>
-
-                <div class="COL">
+            <!-- Información del Proyecto    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <section>
+                <h2>Información del Proyecto</h2>            
+                <!-- Nombre del Proyecto   []   -->       
+                <div class="VER">
+                
                     <div>
-                        <mat-form-field>
-                            <mat-label>Java</mat-label>
-                            <mat-select 
-                                formControlName="fb_tec_leng_java" 
+                        <mat-form-field hintLabel="hintLabel Max 20 letras">
+                            <mat-label>Nombre del Proyecto</mat-label>
+                            <input 
+                                matInput #inputTitulo
+                                formControlName="fb_inf_repo_nombre" 
+                                minlength="6" maxlength="100" 
+                                placeholder="Nombre del Proyecto"  
                             >
-                            <!-- 
-                                formControlName="fb_provincia" placeholder="seleccione la provincia"
-                                [disabled]="!$any(campos).fb_provincia.editable"
-                                    (click)="formularioAcciona('PROVINCIA', provincia.id)"
-                            -->
-                                <mat-option 
-                                    *ngFor="let java of ta_tec_leng.Java" 
-                                    [value]="java"
-                                >
-                                    {{java}}
-                                </mat-option>
-                            </mat-select>
+                            <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
                         </mat-form-field>
-                    </div>                
+                    </div>      
+                        <!-- 
+                            <p>Descripción del Proyecto</p>
+                            [Breve descripción de la aplicación y sus funcionalidades] 
+                        -->
+                        
                     <div>
-                        <mat-form-field>
-                            <mat-label>PHP</mat-label>
-                            <mat-select 
-                                formControlName="fb_tec_leng_php" 
-                            >
-                            <!-- 
-                                formControlName="fb_provincia" placeholder="seleccione la provincia"
-                                [disabled]="!$any(campos).fb_provincia.editable"
-                                    (click)="formularioAcciona('PROVINCIA', provincia.id)"
-                            -->
-                                <mat-option 
-                                    *ngFor="let provincia of ta_tec_leng.PHP" 
-                                    [value]="provincia"
-                                >
-                                    {{provincia}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>                
-                    <div>
-                        <mat-form-field>
-                            <mat-label>Node JS</mat-label>
-                            <mat-select 
-                                formControlName="fb_tec_leng_node" 
-                            >
-                            <!-- 
-                                formControlName="fb_provincia" placeholder="seleccione la provincia"
-                                [disabled]="!$any(campos).fb_provincia.editable"
-                                    (click)="formularioAcciona('PROVINCIA', provincia.id)"
-                            -->
-                                <mat-option 
-                                    *ngFor="let provincia of ta_tec_leng.Node" 
-                                    [value]="provincia"
-                                >
-                                    {{provincia}}
-                                </mat-option>
-                            </mat-select>
+                        <mat-form-field hintLabel="Breve descripción de la aplicación y sus funcionalidades">
+                            <mat-label>Descripción del Proyecto</mat-label>
+                            <textarea 
+                                matInput #inputDescripcion
+                                formControlName="fb_inf_pr_descripcion" 
+                                maxlength="2000" 
+                                matAutosizeMinRows=3
+                                placeholder="Ingrese la descripción de la configuración"                          
+                                type="text" 
+                                
+                            ></textarea><!-- (keyup)="registroDetalleActualiza(registro, $event.target.value)" -->
+                            <mat-hint align="end">{{inputDescripcion.value.length}}/2000</mat-hint>
                         </mat-form-field>
                     </div>
                 </div>
+            </section>
 
-                <div>
-                    <mat-form-field hintLabel="Breve descripción de la aplicación y sus funcionalidades">
-                        <mat-label>Frameworks Utilizados</mat-label>
-                        <textarea 
-                            matInput #inputDescripcion
-                            formControlName="fb_tec_leng_frameworks" 
-                            maxlength="2000" 
-                            matAutosizeMinRows=3
-                            placeholder="Ingrese la descripción de la configuración"                          
-                            type="text" 
-                            
-                        ></textarea><!-- (keyup)="registroDetalleActualiza(registro, $event.target.value)" -->
-                        <mat-hint align="end">{{inputDescripcion.value.length}}/2000</mat-hint>
-                    </mat-form-field>
+            <!-- Repositorio    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <section class="repoInput">
+                <h2>Repositorio</h2>            
+                <!-- Nombre del Proyecto   []   -->       
+                <div class="HOR">
+                
+                    <div>
+                        <mat-form-field hintLabel="hintLabel Max 20 letras">
+                            <mat-label>Nombre del Repositorio</mat-label>
+                            <input 
+                                matInput #inputTitulo
+                                formControlName="fb_inf_repo_nombre" 
+                                minlength="6" maxlength="100" 
+                                placeholder="Repositorio"  
+                            >
+                            <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
+                        </mat-form-field>
+                    </div> 
+                    <div>
+                        <mat-form-field hintLabel="hintLabel Max 20 letras">
+                            <mat-label>URL del Repositorio</mat-label>
+                            <input 
+                                matInput #inputTitulo
+                                formControlName="fb_inf_repo_url" 
+                                minlength="6" maxlength="100" 
+                                placeholder="URL"  
+                            >
+                            <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
+                        </mat-form-field>
+                    </div> 
                 </div>
-
-            </div>
+            </section>
         </div>
         
-        
-        <!-- Repositorio    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <div class="seccion">
-            <h2>Repositorio</h2>            
-            <!-- Nombre del Proyecto   []   -->       
-            <div>
-            
-                <div>
-                    <mat-form-field hintLabel="hintLabel Max 20 letras">
-                        <mat-label>Nombre del Repositorio</mat-label>
-                        <input 
-                            matInput #inputTitulo
-                            formControlName="fb_inf_repo_nombre" 
-                            minlength="6" maxlength="100" 
-                            placeholder="Repositorio"  
-                        >
-                        <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
-                    </mat-form-field>
-                </div> 
-                <div>
-                    <mat-form-field hintLabel="hintLabel Max 20 letras">
-                        <mat-label>URL del Repositorio</mat-label>
-                        <input 
-                            matInput #inputTitulo
-                            formControlName="fb_inf_repo_url" 
-                            minlength="6" maxlength="100" 
-                            placeholder="URL"  
-                        >
-                        <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
-                    </mat-form-field>
-                </div> 
-            </div>
-        </div>
 
+            <!-- Tecnología    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+            <section>
+                <h2>Tecnología</h2>
+                
+                <div>
+
+                    <div class="VER">
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Java</mat-label>
+                                <mat-select 
+                                    formControlName="fb_tec_leng_java" 
+                                >
+                                <!-- 
+                                    formControlName="fb_provincia" placeholder="seleccione la provincia"
+                                    [disabled]="!$any(campos).fb_provincia.editable"
+                                        (click)="formularioAcciona('PROVINCIA', provincia.id)"
+                                -->
+                                    <mat-option 
+                                        *ngFor="let java of ta_tec_leng.Java" 
+                                        [value]="java"
+                                    >
+                                        {{java}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>                
+                        <div>
+                            <mat-form-field>
+                                <mat-label>PHP</mat-label>
+                                <mat-select 
+                                    formControlName="fb_tec_leng_php" 
+                                >
+                                <!-- 
+                                    formControlName="fb_provincia" placeholder="seleccione la provincia"
+                                    [disabled]="!$any(campos).fb_provincia.editable"
+                                        (click)="formularioAcciona('PROVINCIA', provincia.id)"
+                                -->
+                                    <mat-option 
+                                        *ngFor="let provincia of ta_tec_leng.PHP" 
+                                        [value]="provincia"
+                                    >
+                                        {{provincia}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>                
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Node JS</mat-label>
+                                <mat-select 
+                                    formControlName="fb_tec_leng_node" 
+                                >
+                                <!-- 
+                                    formControlName="fb_provincia" placeholder="seleccione la provincia"
+                                    [disabled]="!$any(campos).fb_provincia.editable"
+                                        (click)="formularioAcciona('PROVINCIA', provincia.id)"
+                                -->
+                                    <mat-option 
+                                        *ngFor="let provincia of ta_tec_leng.Node" 
+                                        [value]="provincia"
+                                    >
+                                        {{provincia}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div>
+                        <mat-form-field>
+                            <mat-label>Frameworks utilizados</mat-label>
+                            <textarea 
+                                matInput #inputDescripcion
+                                formControlName="fb_tec_leng_frameworks" 
+                                maxlength="2000" 
+                                matAutosizeMinRows=3
+                                placeholder="Listado de frameworks utilizados"                        
+                                type="text" 
+                                
+                            ></textarea><!-- (keyup)="registroDetalleActualiza(registro, $event.target.value)" -->
+                            <mat-hint align="end">{{inputDescripcion.value.length}}/2000</mat-hint>
+                        </mat-form-field>
+                    </div>
+
+                </div>
+            </section>
+
+    </div>
+
+
+
+    <!-- Información de la Aplicación    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section class=" seccion2">
+        <h2>Información de la Aplicación</h2>            
+        <!-- Nombre del Proyecto   []   -->       
+        <div class="HOR">
         
-        <!-- Información de la Aplicación    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <div class="seccion">
-            <h2>Información de la Aplicación</h2>            
-            <!-- Nombre del Proyecto   []   -->       
             <div>
-            
+                <mat-form-field hintLabel="hintLabel Max 20 letras">
+                    <mat-label>URL Principal de la Aplicación</mat-label>
+                    <input 
+                        matInput #inputTitulo
+                        formControlName="fb_inf_repo_nombre" 
+                        minlength="6" maxlength="100" 
+                        placeholder="Repositorio"  
+                    >
+                    <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
+                </mat-form-field>
+            </div> 
+            <div>
+                
+                <ul class="HOR">
+                      <li *ngFor="let endPoint of endPoints">
+                        <mat-checkbox><!--  [checked]="subtask.completed" -->
+                            {{endPoint}}
+                        </mat-checkbox>
+                    </li>
+                </ul>
+            </div> 
+        </div>
+        <div class="VER">
+        
+            <div class="endPointAdicionales" *ngFor="let endPoint of endPoints">                
+                <DNSISa-com-ele-boton
+                    [input]="['accionDeLista', 'positivo', 'agregar', null]"  
+                    (click)="endPointAgregar($event)"      
+                >
+                </DNSISa-com-ele-boton>
                 <div>
                     <mat-form-field hintLabel="hintLabel Max 20 letras">
                         <mat-label>URL Principal de la Aplicación</mat-label>
                         <input 
                             matInput #inputTitulo
-                            formControlName="fb_inf_repo_nombre" 
+                            
                             minlength="6" maxlength="100" 
                             placeholder="Repositorio"  
-                        >
+                        ><!-- formControlName="fb_inf_repo_nombre"  -->
                         <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
                     </mat-form-field>
-                </div> 
+                </div>
                 <div>
-                    <mat-form-field>
-                        <mat-label>Endpoint</mat-label>
-                        <mat-select 
-                            formControlName="fb_inf_info_endPoints" 
-                        >
-                        <!-- 
-                            formControlName="fb_provincia" placeholder="seleccione la provincia"
-                            [disabled]="!$any(campos).fb_provincia.editable"
-                                (click)="formularioAcciona('PROVINCIA', provincia.id)"
-                        -->
-                            <mat-option 
-                                *ngFor="let provincia of ta_endpoints" 
-                                [value]="provincia"
-                            >
-                                {{provincia}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
+                    
+                    <ul class="HOR">
+                          <li *ngFor="let endPoint of ta_endpoints">
+                            <mat-checkbox><!--  [checked]="subtask.completed" -->
+                                {{endPoint}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
                 </div> 
-            </div>
+            </div> 
         </div>
+        <p>endPoints {{endPoints|json}}</p>
+    </section>
 
-           
         
-        <!-- Servicios que Consumirá la Aplicación    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-        <div class="seccion">
-            <h2>Servicios que consumirá la aplicación</h2>            
-            <!-- Nombre del Proyecto   []   -->      
-             
+
+    <!-- Servicios que Consumirá la Aplicación    - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <section>
+        <h2>Servicios que consumirá la aplicación</h2>            
+        <!-- Nombre del Proyecto   []   -->      
+            
+        
+        <div class="HOR">
             
             <div>
-                
                 <div>
-                    <mat-slide-toggle (change)="tito($event)" formControlName="fb_serv_backend" 
-                        class="example-margin">
+                    <mat-slide-toggle (change)="tito($event)">
                         Backends
                     </mat-slide-toggle>
-                </div>   
+                </div>
+            </div>   
+            <div>
+                   
                 <div>
                     <mat-slide-toggle formControlName="fb_serv_apisExternas" >
                         APIs Externas
                     </mat-slide-toggle>
-                </div>  
+                </div>
+            </div>   
+            <div>
+                  
                 <div>
                     <mat-slide-toggle formControlName="fb_serv_db" >
                         Bases de Datos
                     </mat-slide-toggle>
-                </div>   
-                <div>
-                    <mat-slide-toggle formControlName="fb_serv_cache" 
-                        class="example-margin">
-                        Caches
-                    </mat-slide-toggle>
-                </div>  
-
-            </div>
-            <hr>
-            <br>
-            <div>
+                </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Tipo de Base de Datos</mat-label>
@@ -272,8 +295,25 @@
                         >
                     </mat-form-field>
                 </div> 
-            </div>
-        </div> 
+                
+            </div>   
+            <div>
+                   
+                <div>
+                    <mat-slide-toggle formControlName="fb_serv_cache" 
+                        class="example-margin">
+                        Caches
+                    </mat-slide-toggle>
+                </div>  
+            </div>  
+
+        </div>
+        <hr>
+        <br>
+        <div>
+            x
+        </div>
+    </section> 
     
 <!-- 
     <div>
@@ -393,8 +433,9 @@
             [Espacio para agregar cualquier información adicional relevante]
     </div>
  -->
-</div>
-<div>
+</form>
+
+<div class="botonera">
     
     <DNSISa-com-ele-boton
         [input]="['boton', 'positivo', 'aceptar', 'Enviar requerimientos']"        

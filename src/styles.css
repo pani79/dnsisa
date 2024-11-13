@@ -2,9 +2,10 @@
 
 /* Importamos la ROBOTO que es la piola tipografia actual del SISA */
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import 'assets/sisafont.css';
+@import './assets/sisafont.css';
 
 /* 
+@import 'assets/sisafont.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,400,400i,700,700i,900,900i&display=swap'); 
 */
 
@@ -35,10 +36,58 @@ h1, h2, h3, h4, h5, h6{
     /* color: white; */
 }
 
-section{    margin: 20px 0px 40px 0px; }
+ul li { list-style: none; }
 
 
 
+/*  
+============================================================
+UTILIDADES
+*/
+
+.botonera{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
+/*  
+============================================================
+FORMULARIOS
+*/
+
+
+.formContenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formContenedor section{ 
+    display: flex; 
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: #fff;
+}
+
+.formContenedor section > h2{ margin-top: 0px; }
+
+.formContenedor div.HOR,
+.formContenedor div.VER{ display: flex; gap: 20px; } 
+.formContenedor div.HOR{ flex-direction: row !important; width: 100%; }
+.formContenedor div.VER{ flex-direction: column !important; } 
+
+
+.formContenedor mat-form-field{ width: 100%; }
+
+/*  
+============================================================
+Varios
+*/
 
 .intContAncho{
     display: flex;

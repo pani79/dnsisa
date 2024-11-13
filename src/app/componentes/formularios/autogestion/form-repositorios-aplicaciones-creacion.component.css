@@ -1,3 +1,27 @@
+.formContenedor{background-color: rgba(0, 0, 0, .05); }
+
+.seccion1 > div:first-child{ width: calc(70% - 10px); }
+.seccion1 > div:last-child{ width: calc(30% - 10px); }
+.seccion1 .repoInput > div > div:first-child{ width: calc(34% - 10px); }
+.seccion1 .repoInput > div > div:last-child{ width: calc(66% - 10px); }
+
+.seccion2 ul{ display: flex; flex-direction: row; }
+
+.seccion2 .endPointAdicionales{ display: flex; flex-direction: row; gap: 20px; }
+.seccion2 .endPointAdicionales > div:nth-child(1){ width: calc(40px); }
+.seccion2 .endPointAdicionales > div:nth-child(2){ width: calc(60% - 40px); }
+.seccion2 .endPointAdicionales > div:nth-child(3){ width: calc(40% - 40px); }
+
+
+
+.seccion2 .endPointAdicionales ul{ padding-left: 0px; }
+.seccion2 .endPointAdicionales{ background-color: palevioletred; }
+.seccion2 .endPointAdicionales > div{ border: 1px solid rgba(0, 0, 0, .2); }
+/* 
+.seccion1 .repoInput > div{ background-color: palevioletred;}
+ */
+
+/* 
 .formContenedor{
     display: flex;
     flex-direction: column;
@@ -20,16 +44,12 @@
     padding: 20px;
     border-radius: 10px;
     background-color: #fff;   
-    /* border: 1px solid rgba(0, 0, 0, .2); */
 }
 
 .formContenedor > *:last-child{
     display: flex;
     align-self: flex-end;
 }
-
-
-.formContenedor .seccion > h2{ margin-top: 0px; }
 
 .formContenedor .seccion > div{
     display: flex;
@@ -38,3 +58,14 @@
 }
 .formContenedor .seccion > div.HOR{ flex-direction: row; }
 .formContenedor .seccion > div.VER{ flex-direction: column; }
+ */
+
+
+/* 
+.formContenedor .seccion{ border: 1px solid rgba(0, 0, 0, .2); }
+.formContenedor .seccion > h2{ margin-top: 0px; }
+
+.formContenedor section{ display: flex; gap: 20px; }
+.formContenedor section.HOR{ flex-direction: row; }
+.formContenedor section.VER{ flex-direction: column; } 
+*/

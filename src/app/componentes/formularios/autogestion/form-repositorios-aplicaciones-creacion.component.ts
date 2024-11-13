@@ -29,6 +29,12 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   ta_tec_leng: any
   ta_serv_db: any
 
+  formSecciones = {
+    seccion: false,
+    seccion2: false
+  }
+  endPoints: boolean[] = [true, true, true, true]
+
 
   constructor(
     public fb: FormBuilder
@@ -92,6 +98,15 @@ export class FormRepositoriosAplicacionesCreacionComponent {
       fb_inf_info_nombre:          ['', [Validators.required]]
 
     })
+  }
+
+  endPointAgregar(endpoint?:any){ 
+    console.log('endPointAgregar > ', endpoint);
+    this.endPoints.push(true)
+  }
+  endPointEliminar(endpoint?:any){ 
+    console.log('endPointAgregar > ', endpoint);
+    this.endPoints.push(true)
   }
 
   tito(cosa:any){ 

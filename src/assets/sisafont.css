@@ -5,11 +5,11 @@
 
 @font-face {
   font-family: 'sisafont';
-  src:  url('fonts/sisafont.eot?npbqxx');
-  src:  url('fonts/sisafont.eot?npbqxx#iefix') format('embedded-opentype'),
-    url('fonts/sisafont.ttf?npbqxx') format('truetype'),
-    url('fonts/sisafont.woff?npbqxx') format('woff'),
-    url('fonts/sisafont.svg?npbqxx#icomoon') format('svg');
+  src:  url('./fonts/sisafont.eot?npbqxx');
+  src:  url('./fonts/sisafont.eot?npbqxx#iefix') format('embedded-opentype'),
+    url('./fonts/sisafont.ttf?npbqxx') format('truetype'),
+    url('./fonts/sisafont.woff?npbqxx') format('woff'),
+    url('./fonts/sisafont.svg?npbqxx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

@@ -26,6 +26,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/sisafont.css",
               "src/styles.css"
             ],
             "scripts": []
