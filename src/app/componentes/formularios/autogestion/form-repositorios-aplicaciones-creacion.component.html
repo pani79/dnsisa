@@ -381,13 +381,15 @@
                     
                     <ul class="ut_listaHorizontal">
                         <li *ngFor="let ambiente of ta_despliegue">
-                            <mat-checkbox><!--  [checked]="subtask.completed" -->
+                            <mat-checkbox
+                            (click)="eventoCaptura($event, 'ambienteDespliegue', ambiente )"
+                            ><!--  [checked]="subtask.completed" -->
                                 {{ambiente}}
                             </mat-checkbox>
                         </li>
                     </ul>
                 </div>
-                <div class="inputTexto">
+                <div class="inputTexto" *ngIf="formSecciones.ambienteDespliegueOtro">
                     <mat-form-field>
                         <mat-label>Nombre del ambiente de despliegue</mat-label>
                         <input 
@@ -602,11 +604,10 @@
                 <div>
                     <h3>Consumo de Servicios</h3>            
                     <p>Acceso a través de 3scale o Rutas Públicas</p>
-                    <p>Tipo de acceso:</p>
-                    <ul>
-                        <li>3scale</li>
-                        <li>Rutas públicas</li>
-                    </ul>
+                    <mat-radio-group>
+                        <mat-radio-button class="example-radio-button" (click)="eventoCaptura($event, 'consumoServicios')" value="3scale">3scale</mat-radio-button>
+                        <mat-radio-button class="example-radio-button" (click)="eventoCaptura($event, 'consumoServicios')" value="Rutas públicas">Rutas públicas</mat-radio-button>             
+                    </mat-radio-group>
                     
                     <h3>Storage</h3>    
                     <div>

@@ -40,7 +40,8 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     apis: false,
     dbs: false,
     dbsOtro: false,
-    caches: false
+    caches: false,
+    ambienteDespliegueOtro: false
   }
   endPoints: any[] = []
 
@@ -129,4 +130,16 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     console.log('dbSelecciona => ', valor);
     this.formSecciones.dbsOtro = (valor === "Otro") ? true : false
   }
+
+  eventoCaptura(event: Event, seccion?: string, parametro?: string){
+    console.log('eventoCaptura => ', seccion, event);
+    const valor: any = event.target
+    console.log('eventoCaptura ==> ', seccion, parametro, valor.checked);
+    
+    if(seccion === 'ambienteDespliegue' && parametro === 'Otros'){
+      this.formSecciones.ambienteDespliegueOtro = valor.checked
+      console.log('eventoCaptura ° ambienteDespliegue ==> ', this.formSecciones.ambienteDespliegueOtro);
+    }
+  }
+
 }
