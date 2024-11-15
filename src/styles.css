@@ -45,11 +45,28 @@ ul li { list-style: none; }
 UTILIDADES
 */
 
-.botonera{
+.ut_botonera{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: 10px;
+    margin: 20px 0px;
+}
+
+/* UL */
+.ut_listaHorizontal{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 0px;
+}
+
+.ut_fl_hor_centro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
 }
 
 

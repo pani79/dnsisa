@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormGroup, FormBuilder, Validators, FormControl } from "@angular/forms";
 
 //  Datos
-import { F_REP_APP_LENG, F_REP_APP_ENDPOINT, F_REP_APP_DB, F_REP_APP_AMBIENTE } from 'src/app/info/tasAuxiliares';
+import { 
+  F_REP_APP_LENG, 
+  F_REP_APP_ENDPOINT, 
+  F_REP_APP_DB, 
+  F_REP_APP_AMBIENTE 
+} from 'src/app/info/tasAuxiliares';
 
 
 @Component({
@@ -28,13 +33,18 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   ta_endpoints: any
   ta_tec_leng: any
   ta_serv_db: any
+  ta_despliegue: any
 
   formSecciones = {
-    seccion: false,
-    seccion2: false
+    backends: false,
+    apis: false,
+    dbs: false,
+    dbsOtro: false,
+    caches: false
   }
-  endPoints: boolean[] = [true, true, true, true]
+  endPoints: any[] = []
 
+  
 
   constructor(
     public fb: FormBuilder
@@ -43,6 +53,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     this.ta_endpoints = F_REP_APP_ENDPOINT
     this.ta_tec_leng = F_REP_APP_LENG
     this.ta_serv_db = F_REP_APP_DB
+    this.ta_despliegue = F_REP_APP_AMBIENTE
     this.formularioConfiguracion()
   }
 
@@ -80,7 +91,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
       fb_tec_leng_java:          ['', [Validators.required]],
       fb_tec_leng_php:          ['', [Validators.required]],
       fb_tec_leng_node:          ['', [Validators.required]],
-      fb_tec_leng_frameworks:          ['', [Validators.required]],
+      fb_tec_leng_frameworks:          ['', []],
 
       fb_inf_repo_nombre:          ['', [Validators.required]],
       fb_inf_repo_url:          ['', [Validators.required]],
@@ -104,12 +115,18 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     console.log('endPointAgregar > ', endpoint);
     this.endPoints.push(true)
   }
-  endPointEliminar(endpoint?:any){ 
-    console.log('endPointAgregar > ', endpoint);
-    this.endPoints.push(true)
+  endPointEliminar(endpoint:number){ 
+    console.log('endPointEliminar > ', endpoint);
+    this.endPoints.splice(endpoint, 1)
   }
 
-  tito(cosa:any){ 
-    console.log('hola tito ', cosa.checked);
+  serviciosCambia(valor:boolean, seccion: string){ 
+    console.log('serviciosCambia => ', seccion, ' > ', valor);
+    this.formSecciones[seccion as keyof typeof this.formSecciones] = valor
+  }
+
+  dbSelecciona(valor: string){ 
+    console.log('dbSelecciona => ', valor);
+    this.formSecciones.dbsOtro = (valor === "Otro") ? true : false
   }
 }

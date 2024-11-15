@@ -1,23 +1,57 @@
-.formContenedor{background-color: rgba(0, 0, 0, .05); }
 
-.seccion1 > div:first-child{ width: calc(70% - 10px); }
-.seccion1 > div:last-child{ width: calc(30% - 10px); }
+
+
+.seccion1 > *:first-child{ width: calc(70%); }
+.seccion1 > *:last-child{ width: calc(30% - 20px); }
 .seccion1 .repoInput > div > div:first-child{ width: calc(34% - 10px); }
 .seccion1 .repoInput > div > div:last-child{ width: calc(66% - 10px); }
 
 .seccion2 ul{ display: flex; flex-direction: row; }
 
-.seccion2 .endPointAdicionales{ display: flex; flex-direction: row; gap: 20px; }
-.seccion2 .endPointAdicionales > div:nth-child(1){ width: calc(40px); }
-.seccion2 .endPointAdicionales > div:nth-child(2){ width: calc(60% - 40px); }
-.seccion2 .endPointAdicionales > div:nth-child(3){ width: calc(40% - 40px); }
+.seccion2 .endPointAdicionales{ display: flex; flex-direction: row; align-items: center; gap: 20px; }
+.seccion2 .endPointAdicionales > div:nth-child(1){ width: calc(60% - 40px); }
+.seccion2 .endPointAdicionales > div:nth-child(2){ width: calc(40% - 40px); }
+.seccion2 .endPointAdicionales > div:nth-child(3){ width: calc(40px); }
 
 
-
+.seccion2 .urlPrincipal{ width: 100%; }
 .seccion2 .endPointAdicionales ul{ padding-left: 0px; }
+
+.seccion3 .servicios > div{ width: calc((100% - 60px) / 4);  }
+.seccion3 .servicios > div > div:first-child{ margin-bottom: 20px;  }
+
+.seccion4 > div > div > .inputTexto{ min-width: 400px; }
+
+.seccion5 .responsables{ display: flex; flex-direction: row; align-items: flex-start; gap: 20px; }
+.seccion5 .responsables > div{ width: calc((100% - 40px) / 3); }
+
+.seccion6 .campos > div{ width: calc((100% - 40px) / 3); }
+
+
+
+/* 
+.seccion4 > div > div > *{ border: 1px dotted rgba(0, 0, 0, 1);  }
+.seccion4 > *,
+.seccion4 > * > *{ border: 1px dotted rgba(0, 0, 0, .1); }
+.seccion4 > div{ background-color: sienna; }
+.seccion4 > div > div:nth-child(1){ background-color: rgb(45, 95, 160); }
+.seccion4 > div > div:nth-child(2){ background-color: rgb(22, 63, 115); }
+.seccion4 > div > div:nth-child(3){ background-color: rgb(17, 34, 55); }
+
+
+.seccion4 > div{ background-color: sienna; }
+.seccion4 > div > *{ border: 1px dotted rgba(0, 0, 0, .2); }
+
+.seccion3 .servicios{ background-color: sienna; }
+.formContenedor{background-color: rgba(0, 0, 0, .05); }
+
+.seccion2,
+.seccion2 > div,
+.seccion2 > div *{ border: 1px dotted rgba(0, 0, 0, .2); }
+.seccion2 .endPointAdicionales,
+.seccion2 .endPointAdicionales > div{ border: 1px solid rgba(0, 0, 0, .2); }
 .seccion2 .endPointAdicionales{ background-color: palevioletred; }
 .seccion2 .endPointAdicionales > div{ border: 1px solid rgba(0, 0, 0, .2); }
-/* 
 .seccion1 .repoInput > div{ background-color: palevioletred;}
  */
 
