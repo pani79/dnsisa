@@ -12,7 +12,8 @@ import {
   F_REP_APP_LENG, 
   F_REP_APP_ENDPOINT, 
   F_REP_APP_DB, 
-  F_REP_APP_AMBIENTE 
+  F_REP_APP_AMBIENTE ,
+  F_TEC_TIPO
 } from 'src/app/info/tasAuxiliares';
 
 
@@ -34,10 +35,12 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   ta_tec_leng: any
   ta_serv_db: any
   ta_despliegue: any
+  ta_tec_tipo: any
 
-  formSecciones = {
+  formSecciones: any  = {
     backends: false,
     apis: false,
+    tecnoTipo: '',
     dbs: false,
     dbsOtro: false,
     caches: false
@@ -49,11 +52,11 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   constructor(
     public fb: FormBuilder
   ) { 
-
     this.ta_endpoints = F_REP_APP_ENDPOINT
     this.ta_tec_leng = F_REP_APP_LENG
     this.ta_serv_db = F_REP_APP_DB
     this.ta_despliegue = F_REP_APP_AMBIENTE
+    this.ta_tec_tipo = F_TEC_TIPO
     this.formularioConfiguracion()
   }
 
@@ -120,8 +123,13 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     this.endPoints.splice(endpoint, 1)
   }
 
-  serviciosCambia(valor:boolean, seccion: string){ 
-    console.log('serviciosCambia => ', seccion, ' > ', valor);
+  checkSelecciona(valor:boolean, seccion: string){ 
+    console.log('checkSelecciona => ', seccion, ' > ', valor);
+    this.formSecciones[seccion as keyof typeof this.formSecciones] = valor
+  }
+
+  radioSelecciona(valor:string, seccion: string){ 
+    console.log('radioSelecciona => ', seccion, ' > ', valor);
     this.formSecciones[seccion as keyof typeof this.formSecciones] = valor
   }
 

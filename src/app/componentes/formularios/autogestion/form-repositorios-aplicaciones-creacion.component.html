@@ -89,7 +89,17 @@
             <div>
 
                 <div class="VER">
+                    
                     <div>
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button 
+                                *ngFor="let tipo of ta_tec_tipo" 
+                                [value]="tipo"
+                                (change)="radioSelecciona(tipo, 'tecnoTipo')"
+                            >{{tipo}}</mat-radio-button>
+                          </mat-radio-group>
+                    </div>
+                    <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web' || formSecciones.tecnoTipo === 'APIs'">
                         <mat-form-field>
                             <mat-label>Java</mat-label>
                             <mat-select 
@@ -109,7 +119,7 @@
                             </mat-select>
                         </mat-form-field>
                     </div>                
-                    <div>
+                    <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web' || formSecciones.tecnoTipo === 'APIs'">
                         <mat-form-field>
                             <mat-label>PHP</mat-label>
                             <mat-select 
@@ -129,7 +139,7 @@
                             </mat-select>
                         </mat-form-field>
                     </div>                
-                    <div>
+                    <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web'">
                         <mat-form-field>
                             <mat-label>Node JS</mat-label>
                             <mat-select 
@@ -151,7 +161,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web' || formSecciones.tecnoTipo === 'APIs'">
                     <mat-form-field>
                         <mat-label>Frameworks utilizados</mat-label>
                         <textarea 
@@ -249,7 +259,7 @@
             
             <div>
                 <div>
-                    <mat-slide-toggle (change)="serviciosCambia($event.checked, 'backends')" [checked]="formSecciones.backends">
+                    <mat-slide-toggle (change)="checkSelecciona($event.checked, 'backends')" [checked]="formSecciones.backends">
                         Backends
                     </mat-slide-toggle>
                 </div>
@@ -272,7 +282,7 @@
             <div>
                    
                 <div>
-                    <mat-slide-toggle (change)="serviciosCambia($event.checked, 'apis')" [checked]="formSecciones.apis">
+                    <mat-slide-toggle (change)="checkSelecciona($event.checked, 'apis')" [checked]="formSecciones.apis">
                         APIs Externas
                     </mat-slide-toggle>
                 </div>
@@ -295,7 +305,7 @@
             <div>
                   
                 <div>
-                    <mat-slide-toggle (change)="serviciosCambia($event.checked, 'dbs')" [checked]="formSecciones.dbs">
+                    <mat-slide-toggle (change)="checkSelecciona($event.checked, 'dbs')" [checked]="formSecciones.dbs">
                         Bases de Datos
                     </mat-slide-toggle>
                 </div>
@@ -330,7 +340,7 @@
             <div>
                    
                 <div>
-                    <mat-slide-toggle (change)="serviciosCambia($event.checked, 'caches')" [checked]="formSecciones.caches">
+                    <mat-slide-toggle (change)="checkSelecciona($event.checked, 'caches')" [checked]="formSecciones.caches">
                         Caches
                     </mat-slide-toggle>
                 </div>  
@@ -401,9 +411,8 @@
                 </div>  
             </div>
 
-            <div class="HOR ut_fl_hor_centro">
-                <!-- 
-                    -->
+            <!-- 
+            <div class="HOR ut_fl_hor_centro">                
                 <div>
                     <p>URL<br>del despliegue</p>            
                 </div> 
@@ -416,10 +425,11 @@
                             minlength="6" maxlength="100" 
                             placeholder="url"  
                         >
-                        <!-- <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint> -->
                     </mat-form-field>               
                 </div> 
             </div>
+            -->
+
         </div>
     </section> 
 
@@ -610,7 +620,7 @@
                     
                     <h3>Storage</h3>    
                     <div>
-                        <mat-slide-toggle (change)="serviciosCambia($event.checked, 'backends')" [checked]="formSecciones.backends">
+                        <mat-slide-toggle (change)="checkSelecciona($event.checked, 'backends')" [checked]="formSecciones.backends">
                             Requiere storage local
                         </mat-slide-toggle>
                     </div>
