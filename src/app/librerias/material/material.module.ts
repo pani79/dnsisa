@@ -5,7 +5,7 @@ Autor: Pani
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {MatAutocompleteModule} from '@angular/material/autocomplete'; 
+import { MatAutocompleteModule } from '@angular/material/autocomplete'; 
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -22,8 +22,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
-//import { MatCardModule } from '@angular/material/card';
 import { MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material/core';
+//import { MatIconRegistry } from '@angular/material/icon';
+//import { MatCardModule } from '@angular/material/card';
 
 const MaterialComponentes = [
   MatAutocompleteModule,
@@ -43,6 +44,7 @@ const MaterialComponentes = [
   MatSortModule,
   MatTableModule,
   MatTooltipModule
+  // MatIconRegistry,
   //,  MatCardModule
 ];
 
