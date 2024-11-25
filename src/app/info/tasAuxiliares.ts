@@ -280,6 +280,8 @@ export const F_REP_APP_DB = ['MySQL', 'Oracle', 'PostgreSQL', 'Otro']
 
 export const F_REP_APP_AMBIENTE = ['Desarrollo', 'QA', 'Producción', 'Otros']
 
+export const F_REP_GRUPO = ['SISA', 'Residencias', 'REFEPS Matriculas', 'Soporte Tecnico', 'REPROCANN']
+
 export const F_TEC_TIPO = ['Aplicación web', 'APIs']
 
 

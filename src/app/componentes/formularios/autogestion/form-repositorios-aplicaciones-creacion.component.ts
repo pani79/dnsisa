@@ -12,7 +12,8 @@ import {
   F_REP_APP_LENG, 
   F_REP_APP_ENDPOINT, 
   F_REP_APP_DB, 
-  F_REP_APP_AMBIENTE ,
+  F_REP_APP_AMBIENTE,
+  F_REP_GRUPO,
   F_TEC_TIPO
 } from 'src/app/info/tasAuxiliares';
 
@@ -36,6 +37,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   ta_serv_db: any
   ta_despliegue: any
   ta_tec_tipo: any
+  ta_repo_grupo: any
 
   formSecciones: any  = {
     backends: false,
@@ -58,6 +60,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     this.ta_serv_db = F_REP_APP_DB
     this.ta_despliegue = F_REP_APP_AMBIENTE
     this.ta_tec_tipo = F_TEC_TIPO
+    this.ta_repo_grupo = F_REP_GRUPO
     this.formularioConfiguracion()
   }
 
@@ -71,7 +74,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
   get fb_tec_leng_frameworks(){      return this.formulario.get('fb_tec_leng_frameworks');}
 
   get fb_inf_repo_nombre(){      return this.formulario.get('fb_inf_repo_nombre');}
-  get fb_inf_repo_url(){      return this.formulario.get('fb_inf_repo_url');}
+  get fb_inf_repo_grupo(){      return this.formulario.get('fb_inf_repo_grupo');}
 
   get fb_inf_info_url(){      return this.formulario.get('fb_inf_info_url');}
   get fb_inf_info_endPoints(){      return this.formulario.get('fb_inf_info_endPoints');}
@@ -98,7 +101,7 @@ export class FormRepositoriosAplicacionesCreacionComponent {
       fb_tec_leng_frameworks:          ['', []],
 
       fb_inf_repo_nombre:          ['', [Validators.required]],
-      fb_inf_repo_url:          ['', [Validators.required]],
+      fb_inf_repo_grupo:          ['', [Validators.required]],
 
       fb_inf_info_url:          ['', [Validators.required]],
       fb_inf_info_endPoints:            ['', [Validators.required]],

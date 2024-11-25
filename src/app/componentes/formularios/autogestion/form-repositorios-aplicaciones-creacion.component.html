@@ -67,6 +67,20 @@
                     </div> 
                     <div>
                         <mat-form-field>
+                            <mat-label>Grupo del repositorio</mat-label>
+                            <mat-select 
+                                formControlName="fb_inf_repo_grupo" 
+                            >
+                                <mat-option 
+                                    *ngFor="let grupoRepo of ta_repo_grupo" 
+                                    [value]="grupoRepo"
+                                >
+                                    {{grupoRepo}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <!-- 
+                        <mat-form-field>
                             <mat-label>URL del repositorio</mat-label>
                             <input 
                                 matInput #inputTitulo
@@ -76,6 +90,7 @@
                             >
                             <mat-hint align="end">{{inputTitulo.value.length}}/100</mat-hint>
                         </mat-form-field>
+                        -->
                     </div> 
                 </div>
             </section>
