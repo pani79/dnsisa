@@ -108,6 +108,20 @@ FORMULARIOS
 Varios
 */
 
+
+.logo_presidencia{
+    background-image: url('src\assets\img\logo_presidencia_pl.png');
+    height: 40px;
+    width: 158px;
+    border: none !important;
+}
+.logo_msal{
+    background-image: url('./assets/img/logo_msal_pl.png');
+    height: 40px;
+    width: 104px;
+    border: none !important;
+}
+
 .intContAncho{
     display: flex;
     flex-direction: row;
