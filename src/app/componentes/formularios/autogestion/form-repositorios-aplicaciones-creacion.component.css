@@ -27,7 +27,7 @@
 
 .seccion6 .campos > div{ width: calc((100% - 40px) / 3); }
 
-
+.frameworks {   margin-top: 20px; }
 
 /* 
 .seccion4 > div > div > *{ border: 1px dotted rgba(0, 0, 0, 1);  }

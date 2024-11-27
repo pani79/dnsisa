@@ -43,6 +43,8 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     backends: false,
     apis: false,
     tecnoTipo: '',
+    tecnoFront: '',
+    tecnoBack: '',
     dbs: false,
     dbsOtro: false,
     caches: false,
@@ -150,6 +152,12 @@ export class FormRepositoriosAplicacionesCreacionComponent {
     if(seccion === 'ambienteDespliegue' && parametro === 'Otros'){
       this.formSecciones.ambienteDespliegueOtro = valor.checked
       console.log('eventoCaptura ° ambienteDespliegue ==> ', this.formSecciones.ambienteDespliegueOtro);
+    } else if(seccion === 'tecnoFront'){
+      this.formSecciones.tecnoFront = valor.checked
+      console.log('eventoCaptura ° tecnoFront ==> ', this.formSecciones.tecnoFront);
+    } else if(seccion === 'tecnoBack'){
+      this.formSecciones.tecnoBack = valor.checked
+      console.log('eventoCaptura ° tecnoBack ==> ', this.formSecciones.tecnoBack);
     }
   }
 

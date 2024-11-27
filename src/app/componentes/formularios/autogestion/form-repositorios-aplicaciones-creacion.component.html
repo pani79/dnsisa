@@ -106,35 +106,31 @@
                 <div class="VER">
                     
                     <div>
-                        <mat-radio-group aria-label="Select an option">
+                        <mat-radio-group aria-label="Seleccione">
                             <mat-radio-button 
                                 *ngFor="let tipo of ta_tec_tipo" 
                                 [value]="tipo"
                                 (change)="radioSelecciona(tipo, 'tecnoTipo')"
                             >{{tipo}}</mat-radio-button>
-                          </mat-radio-group>
+                        </mat-radio-group>
+                    </div>
+                    <!-- <p>{{formSecciones|json}}</p> -->
+                    
+                    <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web'">
+                        <h3>Front End</h3>
+                        <mat-radio-group aria-label="Seleccione">
+                            <mat-radio-button (click)="radioSelecciona('php', 'tecnoFront')" value="php">PHP</mat-radio-button>
+                            <mat-radio-button (click)="radioSelecciona('node', 'tecnoFront')" value="node">Node</mat-radio-button>
+                        </mat-radio-group>
                     </div>
                     <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web' || formSecciones.tecnoTipo === 'APIs'">
-                        <mat-form-field>
-                            <mat-label>Java</mat-label>
-                            <mat-select 
-                                formControlName="fb_tec_leng_java" 
-                            >
-                            <!-- 
-                                formControlName="fb_provincia" placeholder="seleccione la provincia"
-                                [disabled]="!$any(campos).fb_provincia.editable"
-                                    (click)="formularioAcciona('PROVINCIA', provincia.id)"
-                            -->
-                                <mat-option 
-                                    *ngFor="let java of ta_tec_leng.Java" 
-                                    [value]="java"
-                                >
-                                    {{java}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>                
-                    <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web' || formSecciones.tecnoTipo === 'APIs'">
+                        <h3>Back End</h3>
+                        <mat-radio-group aria-label="Seleccione">
+                            <mat-radio-button (click)="radioSelecciona('php', 'tecnoBack')" value="php">PHP</mat-radio-button>
+                            <mat-radio-button (click)="radioSelecciona('java', 'tecnoBack')" value="java">Java</mat-radio-button>
+                        </mat-radio-group>
+                    </div>         
+                    <div *ngIf="formSecciones.tecnoBack === 'php' || formSecciones.tecnoFront === 'php'">
                         <mat-form-field>
                             <mat-label>PHP</mat-label>
                             <mat-select 
@@ -153,8 +149,8 @@
                                 </mat-option>
                             </mat-select>
                         </mat-form-field>
-                    </div>                
-                    <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web'">
+                    </div>         
+                    <div *ngIf="formSecciones.tecnoFront === 'node'">
                         <mat-form-field>
                             <mat-label>Node JS</mat-label>
                             <mat-select 
@@ -174,9 +170,29 @@
                             </mat-select>
                         </mat-form-field>
                     </div>
+                    <div *ngIf="formSecciones.tecnoBack === 'java'">
+                        <mat-form-field>
+                            <mat-label>Java</mat-label>
+                            <mat-select 
+                                formControlName="fb_tec_leng_java" 
+                            >
+                            <!-- 
+                                formControlName="fb_provincia" placeholder="seleccione la provincia"
+                                [disabled]="!$any(campos).fb_provincia.editable"
+                                    (click)="formularioAcciona('PROVINCIA', provincia.id)"
+                            -->
+                                <mat-option 
+                                    *ngFor="let java of ta_tec_leng.Java" 
+                                    [value]="java"
+                                >
+                                    {{java}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>              
                 </div>
 
-                <div *ngIf="formSecciones.tecnoTipo === 'Aplicación web' || formSecciones.tecnoTipo === 'APIs'">
+                <div *ngIf="formSecciones.tecnoTipo !== ''" class="frameworks">
                     <mat-form-field>
                         <mat-label>Frameworks utilizados</mat-label>
                         <textarea 
@@ -630,8 +646,8 @@
                     <h3>Consumo de Servicios</h3>            
                     <p>Acceso a través de 3scale o Rutas Públicas</p>
                     <mat-radio-group>
-                        <mat-radio-button class="example-radio-button" (click)="eventoCaptura($event, 'consumoServicios')" value="3scale">3scale</mat-radio-button>
-                        <mat-radio-button class="example-radio-button" (click)="eventoCaptura($event, 'consumoServicios')" value="Rutas públicas">Rutas públicas</mat-radio-button>             
+                        <mat-radio-button (click)="eventoCaptura($event, 'consumoServicios')" value="3scale">3scale</mat-radio-button>
+                        <mat-radio-button (click)="eventoCaptura($event, 'consumoServicios')" value="Rutas públicas">Rutas públicas</mat-radio-button>             
                     </mat-radio-group>
                     
                     <h3>Storage</h3>    
